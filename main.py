@@ -3,18 +3,18 @@ import socket
 
 def scan_port(ipAddress, port, timeout=0.1):
     # Create a socket object
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # Apply timeout
-    s.settimeout(timeout)
+    socket.settimeout(timeout)
 
     try:
         # Try to connect to the port
-        s.connect((ipAddress, port))
+        socket.connect((ipAddress, port))
         return True
     except:
         return False
     finally:
-        s.close()
+        socket.close()
 
 def main(ipAddress):
     # Ports to scan
