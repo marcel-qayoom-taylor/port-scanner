@@ -24,8 +24,6 @@ def main(ip):
     for port in ports:
         if scan_port(ip, port, timeout):
             print(f"Port {port} is open on {ip}")
-        else:
-            print(f"Port {port} is closed on {ip}")
 
 if __name__ == "__main__":
     # Check if a parameter was provided
