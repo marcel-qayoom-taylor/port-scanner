@@ -1,7 +1,7 @@
 import sys
 import socket
 
-def scan_port(ipAddress, port, timeout):
+def scan_port(ipAddress, port, timeout=0.1):
     # Create a socket object
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # Apply timeout
